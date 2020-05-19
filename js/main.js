@@ -208,9 +208,7 @@ $(function() {
 
 
 
-    $(".fixed-menu .cur-switcher").on("click", function () {
-      $(".fixed-menu .cur-switcher .switch").slideToggle();
-    });
+
 
   
 });
