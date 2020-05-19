@@ -1648,7 +1648,7 @@ button {
     display: none;
   }
   .nav-bar .icons .cart-icon .counter {
-    padding: 3px 0 0 0;
+    padding: 2px 0 0 0;
   }
   .nav-bar .icons .menu-icon, .nav-bar .icons .search-icon {
     display: block;
@@ -1662,7 +1662,7 @@ button {
   .nav-bar .nav-search {
     display: none;
   }
-  .fixed-menu .lang-switcher {
+  .fixed-menu .lang-switcher, .fixed-menu .cur-switcher {
     position: relative;
     font-family: reg;
     font-size: 14px;
@@ -1678,12 +1678,12 @@ button {
         -ms-flex-align: center;
             align-items: center;
   }
-  .fixed-menu .lang-switcher > span {
+  .fixed-menu .lang-switcher > span, .fixed-menu .cur-switcher > span {
     cursor: pointer;
     -webkit-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
   }
-  .fixed-menu .lang-switcher > span::after {
+  .fixed-menu .lang-switcher > span::after, .fixed-menu .cur-switcher > span::after {
     content: "\f0d7";
     /* FontAwesome Unicode */
     font-family: 'Font Awesome\ 5 Free';
@@ -1694,7 +1694,7 @@ button {
     -webkit-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
   }
-  .fixed-menu .lang-switcher .switch {
+  .fixed-menu .lang-switcher .switch, .fixed-menu .cur-switcher .switch {
     opacity: 0;
     visibility: hidden;
     position: absolute;
@@ -1704,6 +1704,9 @@ button {
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
     min-width: 90px;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
     background-color: #fff;
     -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.09);
             box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.09);
@@ -1726,56 +1729,28 @@ button {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .fixed-menu .lang-switcher .switch a {
+  .fixed-menu .lang-switcher .switch a, .fixed-menu .cur-switcher .switch a {
     display: block;
     margin: 3px 0;
     -webkit-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
   }
-  .fixed-menu .lang-switcher .switch a:hover {
+  .fixed-menu .lang-switcher .switch a:hover, .fixed-menu .cur-switcher .switch a:hover {
     color: #958854;
   }
-  .fixed-menu .lang-switcher .switch span {
+  .fixed-menu .lang-switcher .switch span, .fixed-menu .cur-switcher .switch span {
     padding: 0 2px;
   }
-  .fixed-menu .lang-switcher:hover > span {
+  .fixed-menu .lang-switcher:hover > span, .fixed-menu .cur-switcher:hover > span {
     color: #958854;
   }
-  .fixed-menu .lang-switcher:hover > span::after {
+  .fixed-menu .lang-switcher:hover > span::after, .fixed-menu .cur-switcher:hover > span::after {
     color: #958854;
   }
-  .fixed-menu .lang-switcher:hover .switch {
+  .fixed-menu .lang-switcher:hover .switch, .fixed-menu .cur-switcher:hover .switch {
     top: 23px;
     opacity: 1;
     visibility: visible;
-  }
-  .fixed-menu .cur-switcher > span {
-    font-family: reg;
-    font-size: 16px;
-  }
-  .fixed-menu .cur-switcher .switch {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    padding: 5px 12px;
-    display: none;
-  }
-  .fixed-menu .cur-switcher .switch a {
-    display: block;
-    font-family: reg;
-    font-size: 16px;
-    color: #444;
-    padding: 4px 0;
   }
   .fixed-menu {
     position: fixed;
@@ -1805,9 +1780,9 @@ button {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
